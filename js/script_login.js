@@ -13,20 +13,19 @@ for (i = 0; i !=0 ; i ++) {
 // VALIDACIÓN DE USUARIO //
 
 function usuario() {
-    nombre 
-    apellido_;
-    usuario_;
-    password_;
+    let nombre_; 
+    let apellido_;
+    let usuario_;
+    let password_;
     return;
 }
 
-for(let i=1; i<=4; i++) { // Conteo de 3 veces como máximo para volver a ingresar los datos //
+for(let i=1; i<=4; i++) { // Conteo de 3 veces como máximo para volver a ingresar los datos erróneos o vacíos //
 
-Number(i);
-let nombre_ = prompt("Ingresa tu nombre");
-let apellido_ = prompt("Ingreso tu apellido");
-let usuario_ = prompt("Ingresa el nombre de usuario que quieras");
-let password_ = prompt("Ingresa una contraseña para tu usuario");
+nombre_ = prompt("Ingresa tu nombre");
+apellido_ = prompt("Ingreso tu apellido");
+usuario_ = prompt("Ingresa el nombre de usuario que quieras");
+password_ = prompt("Ingresa una contraseña para tu usuario");
 
 if (nombre_ === "" && apellido_ === "" && usuario_ === "" && password_ === "") {
     alert("No ingresaste ningún dato");
