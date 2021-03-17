@@ -12,46 +12,45 @@ for (i = 0; i !=0 ; i ++) {
 
 // VALIDACIÓN DE USUARIO //
 
+let nombre_; 
+let apellido_;
+let usuario_;
+let password_;
+
 function usuario() {
-    let nombre_; 
-    let apellido_;
-    let usuario_;
-    let password_;
-    return;
+
+    for(let i=1; i<=4; i++) { // Conteo de 3 veces como máximo para volver a ingresar los datos erróneos o vacíos //
+
+        let nombre_ = prompt("Ingresa tu nombre");
+        let apellido_ = prompt("Ingreso tu apellido");
+        let usuario_ = prompt("Ingresa el nombre de usuario que quieras");
+        let password_ = prompt("Ingresa una contraseña para tu usuario");
+
+        if (nombre_ === "" && apellido_ === "" && usuario_ === "" && password_ === "") {
+            alert("No ingresaste ningún dato");
+            // Se está indicando que no puso ningún dato en ningún campo //
+        }
+        else if (nombre_ == null || apellido_ == null || usuario_ == null || password_ == null) {
+            alert("No ingresaste ningún dato");
+            // Se está indicando que clickeó el botón "Cancelar" en todos los campos y lo traduce como que no puso ningún dato //
+        }
+        else if (nombre_ == "" || apellido_ == "" || usuario_ == "" || password_ == "") {
+            alert("No dejes ningún campo vacío");
+            // Se está indicando que en alguno de los campos no puso algún dato o el dato es null //
+        }
+        else {
+            respuesta = `Usuario creado con éxito!\nVerificaremos tus datos para una correcta gestión:\n\n Nombre: ${nombre_} \n Apellido: ${apellido_} \n Nombre de Usuario: ${usuario_} \n Contraseña: ${password_}`;
+            return alert(respuesta);
+        }
+        if (i == 3) {
+            alert("Has alcanzado el límite de intentos");
+            break;
+            // Se indicó que el número de intentos posibles por ingresar datos es de "3", y luego de "rompe" el ciclo //
+        }
+    }
 }
 
-for(let i=1; i<=4; i++) { // Conteo de 3 veces como máximo para volver a ingresar los datos erróneos o vacíos //
-
-    nombre_ = prompt("Ingresa tu nombre");
-    apellido_ = prompt("Ingreso tu apellido");
-    usuario_ = prompt("Ingresa el nombre de usuario que quieras");
-    password_ = prompt("Ingresa una contraseña para tu usuario");
-
-    if (nombre_ === "" && apellido_ === "" && usuario_ === "" && password_ === "") {
-        alert("No ingresaste ningún dato");
-        // Se está indicando que no puso ningún dato en ningún campo //
-    }
-    else if (nombre_ == null || apellido_ == null || usuario_ == null || password_ == null) {
-        alert("No ingresaste ningún dato");
-        // Se está indicando que clickeó el botón "Cancelar" en todos los campos y lo traduce como que no puso ningún dato //
-    }
-    else if (nombre_ == "" || apellido_ == "" || usuario_ == "" || password_ == "") {
-        alert("No dejes ningún campo vacío");
-        // Se está indicando que en alguno de los campos no puso algún dato o el dato es null //
-    }
-    else {
-        alert("Usuario creado con éxito!");
-        alert(`Verificaremos tus datos para una correcta gestión:\n\n Nombre: ${nombre_} \n Apellido: ${apellido_} \n Nombre de Usuario: ${usuario_} \n Contraseña: ${password_}`);
-        break;
-    }
-
-    if (i == 3) {
-        alert("Has alcanzado el límite de intentos");
-        // Se indicó que el número de intentos posibles por ingresar datos es de "3", y luego de "rompe" el ciclo //
-        break;
-    }
-
-}
+usuario();
 
 
 
