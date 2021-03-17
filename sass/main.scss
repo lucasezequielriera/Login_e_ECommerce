@@ -88,6 +88,16 @@ main {
     }
 }
 
+#login {
+    button {
+        width: 50%;
+        margin-top: 20px;
+        color: white;
+        font-family: 'system-ui';
+        font-weight: 300;
+    }
+}
+
 @media(max-width:991px) {
     .left-part, .right-part {
         text-align: center !important;
