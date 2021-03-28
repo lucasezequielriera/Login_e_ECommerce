@@ -1,0 +1,44 @@
+{
+    "Curso 1": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 2": {
+        "nombre": "CSS",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 3": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 4": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 5": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 6": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    },
+    "Curso 7": {
+        "nombre": "HTML",
+        "precio": "10000",
+        "profesor": "Lucas Riera",
+        "stock": "5"
+    }
+}
