@@ -1,5 +1,11 @@
 'use strict'
 
+//============================================ HEADER LOGO'S NAME =============================================//
+
+document.getElementById("nombreLogo").innerHTML = "Programmer Courses";
+
+//=============================================================================================================//
+
 //============================================== CREANDO USUARIO ==============================================//
 
 // Creacion de usuario a partir de Arrays //
@@ -40,13 +46,13 @@ function Curso(nombre, precio, profesor, stock) {
 
 // Instanciando las propiedades del objeto constructor (Productos) //
 // Object Literal (manera resumida) //
-const Curso1 = new Curso("HTML", "$5000", "Ramon Diaz", 5);
-const Curso2 = new Curso("CSS", "$5000", "Ramon Diaz", 5);
-const Curso3 = new Curso("JS", "$5000", "Ramon Diaz", 5);
-const Curso4 = new Curso("ReactJS", "$5000", "Ramon Diaz", 5);
-const Curso5 = new Curso("PHP", "$5000", "Ramon Diaz", 5);
-const Curso6 = new Curso("Python", "$5000", "Ramon Diaz", 5);
-const Curso7 = new Curso("C++", "$5000", "Ramon Diaz", 5);
+const Curso1 = new Curso("HTML", "$6000", "Lucas Riera", 5);
+const Curso2 = new Curso("CSS", "$8000", "Ramon Diaz", 5);
+const Curso3 = new Curso("JS", "$3000", "Cristina Sanchez", 5);
+const Curso4 = new Curso("ReactJS", "$4000", "Julieta Diaz", 5);
+const Curso5 = new Curso("PHP", "$8000", "Cristina Perez", 5);
+const Curso6 = new Curso("Python", "$15000", "Leonardo Miguel", 5);
+const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 
 //=============================================================================================================//
 
