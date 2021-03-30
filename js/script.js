@@ -60,10 +60,16 @@ const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 
 // Definir Array del Carrito //
 let Carrito = [];
-let contador = 0;
-localStorage.getItem("posicion_contador");
 
-// Función en donde se agrega cada curso al carrito, y luego se guarda por SessionStorage //
+// Definir el contador a "0" //
+let contador;
+if (contador == null) {
+    contador = 0;
+} else {
+    contador = localStorage.getItem("posicion_contador");
+}
+
+// Función en donde se agrega cada curso al carrito, y luego se guarda por LocalStorage //
 function agregarAlCarrito(curso) {
 
     let resultado = confirm(`¿Estás seguro que quieres comprar el curso de ${curso.nombre}?`);
@@ -73,19 +79,21 @@ function agregarAlCarrito(curso) {
             Carrito.push(curso);
             localStorage.setItem("Carrito", JSON.stringify(Carrito));
             contador = contador + 1;
-            // Utilizando DOM para insertar el contador en el badge de Bootstrap //
-            document.getElementById("contador").innerHTML = contador;
             // Utilizando Storage para guardar datos del contador //
             localStorage.setItem("posicion_contador", contador);
-        } else alert("No hay problema");
+            // Utilizando DOM para insertar el contador en el badge de Bootstrap //
+            document.getElementById("contador").innerHTML = contador;
+        }
+        else {alert("No hay problema")};
 }
+console.log();
 
 //=============================================================================================================//
 
 //========================================= PRODUCTOS (EN EL CARRITO) =========================================// 
 
 function getCarrito() {
-    let button = `<button class="btn btn-danger onclick="limpiar()">X</button>`
+    let button = `<button class="btn btn-danger" onclick="limpiar()">X</button>`
     Carrito = JSON.parse(localStorage.getItem("Carrito"));
     Carrito.forEach(function (value) {
         document.getElementById("table_productos_comprados").innerHTML += 
@@ -100,6 +108,7 @@ function getCarrito() {
 // Limpiar Storage una vez que se inicializa la function limpiar() y se escribe el String indicado //
 function limpiar() {
     localStorage.clear();
+    location.reload();
 }
 
 //=============================================================================================================//
