@@ -61,7 +61,7 @@ const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 // Definir Array del Carrito //
 let Carrito = [];
 let contador = 0;
-sessionStorage.getItem("posicion_contador");
+localStorage.getItem("posicion_contador");
 
 // Función en donde se agrega cada curso al carrito, y luego se guarda por SessionStorage //
 function agregarAlCarrito(curso) {
@@ -71,12 +71,12 @@ function agregarAlCarrito(curso) {
         if (resultado == true) {
             alert("Compra realizada con éxito!");
             Carrito.push(curso);
-            sessionStorage.setItem("Carrito", JSON.stringify(Carrito));
+            localStorage.setItem("Carrito", JSON.stringify(Carrito));
             contador = contador + 1;
             // Utilizando DOM para insertar el contador en el badge de Bootstrap //
             document.getElementById("contador").innerHTML = contador;
             // Utilizando Storage para guardar datos del contador //
-            sessionStorage.setItem("posicion_contador", contador);
+            localStorage.setItem("posicion_contador", contador);
         } else alert("No hay problema");
 }
 
@@ -85,10 +85,11 @@ function agregarAlCarrito(curso) {
 //========================================= PRODUCTOS (EN EL CARRITO) =========================================// 
 
 function getCarrito() {
-    Carrito = JSON.parse(sessionStorage.getItem("Carrito"));
+    let button = `<button class="btn btn-danger onclick="limpiar()">X</button>`
+    Carrito = JSON.parse(localStorage.getItem("Carrito"));
     Carrito.forEach(function (value) {
         document.getElementById("table_productos_comprados").innerHTML += 
-        `<tr> <td> ${value.nombre}</td> <td> ${value.precio}</td> <td> ${value.profesor}</td> <td> ${value.stock}</td> </tr>`;
+        `<tr> <td> ${value.nombre}</td> <td> ${value.precio}</td> <td> ${value.profesor}</td> <td> ${value.stock}</td> <td>${button}</td></tr>`;
     });
 }
 
@@ -98,16 +99,7 @@ function getCarrito() {
 
 // Limpiar Storage una vez que se inicializa la function limpiar() y se escribe el String indicado //
 function limpiar() {
-    let limpiar_consola;
-    do {
-        limpiar_consola = prompt("Escribe");
-    } while (limpiar_consola != "limpiar");
-    // Una vez que se escribe "limpiar" se limpia el Storage //
-    if (limpiar_consola == "limpiar") {
-        sessionStorage.clear();
-        window.location.reload();
-        return;
-    }
+    localStorage.clear();
 }
 
 //=============================================================================================================//
