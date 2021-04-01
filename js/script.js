@@ -60,8 +60,10 @@ const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 
 // Definir Array del Carrito //
 let Carrito = [];
+// Llamar al localStorage al iniciar la página //
 
-// Definir el contador a "0" //
+
+// Definir el contador a "0" o al localStorage //
 let contador;
 if (contador == null) {
     contador = 0;
