@@ -2,7 +2,7 @@
 
 //============================================ HEADER LOGO'S NAME =============================================//
 
-document.getElementById("nombreLogo").innerHTML = "Programmer Courses";
+document.getElementById("nombreLogo").innerHTML = "Code It's Fun";
 
 //=============================================================================================================//
 
@@ -60,20 +60,18 @@ const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 
 // Definir Array del Carrito //
 let Carrito = [];
-// Llamar al localStorage al iniciar la página //
-
 
 // Definir el contador a "0" o al localStorage //
 let contador;
-if (contador == null) {
-    contador = 0;
+if (contador != 0) {
+    contador = Number(localStorage.getItem("posicion_contador"));
+    console.log(contador);
 } else {
-    contador = localStorage.getItem("posicion_contador");
+    contador = 0;
 }
 
 // Función en donde se agrega cada curso al carrito, y luego se guarda por LocalStorage //
 function agregarAlCarrito(curso) {
-
     let resultado = confirm(`¿Estás seguro que quieres comprar el curso de ${curso.nombre}?`);
         // Condicional para agregar al carrito o no //
         if (resultado == true) {
@@ -88,7 +86,6 @@ function agregarAlCarrito(curso) {
         }
         else {alert("No hay problema")};
 }
-console.log();
 
 //=============================================================================================================//
 
@@ -103,6 +100,7 @@ function getCarrito() {
     });
 }
 
+
 //=============================================================================================================//
 
 //================================ OPTIONAL (LIMPIAR STORAGE POR CONSOLA) =====================================//
@@ -114,3 +112,5 @@ function limpiar() {
 }
 
 //=============================================================================================================//
+window.reload(document.getElementById("contador").innerHTML = contador);
+window.reload(localStorage.getItem("Carrito"));
