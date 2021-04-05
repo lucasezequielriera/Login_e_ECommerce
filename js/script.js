@@ -59,13 +59,12 @@ const Curso7 = new Curso("C++", "$9000", "Iara Paez", 5);
 //============================================ COMPRAR PRODUCTOS ==============================================//
 
 // Definir Array del Carrito //
-let Carrito = [];
+let Carrito = [localStorage.getItem("Carrito")];
 
 // Definir el contador a "0" o al localStorage //
 let contador;
 if (contador != 0) {
     contador = Number(localStorage.getItem("posicion_contador"));
-    console.log(contador);
 } else {
     contador = 0;
 }
@@ -113,4 +112,3 @@ function limpiar() {
 
 //=============================================================================================================//
 window.reload(document.getElementById("contador").innerHTML = contador);
-window.reload(localStorage.getItem("Carrito"));
