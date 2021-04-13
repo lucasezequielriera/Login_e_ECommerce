@@ -42,6 +42,9 @@ body {
 
 header {
     #navbar {
+        .row {
+            width: 99%;
+        }
         height: 50px;
         background-color: transparent;
         .left-part, .right-part {
@@ -63,6 +66,7 @@ header {
         .right-part {
             text-align: end;
             border-left: none;
+            padding-right: 0px;
             a {
                 margin: 10px;
                 text-decoration: none;
@@ -159,12 +163,39 @@ main {
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 500;
+            button {
+                font-size: 12px !important;
+                padding: 2px 10px;
+            }
         }
         td {
             padding: 10px;
             border-top: 1px solid;
             font-weight: 400;
             color: white;
+        }
+    }
+    .cuadro_de_precio {
+        background-color: black;
+        letter-spacing: 2px;
+        text-align: center;
+        border: 1px solid yellow;
+        border-right: none;
+        p {
+            margin-bottom: 0px;
+            padding: 5px;
+            text-transform: uppercase;
+            background-color: yellow;
+            color: black;
+            font-weight: 600;
+            font-size: 15px;
+            width: 300px;
+            border: 2px solid yellow;
+            #precio {
+                padding: 17px;
+                margin-left: 10px;
+                font-weight: 400;
+            }
         }
     }
 }
