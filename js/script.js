@@ -53,7 +53,8 @@ function usuario_nuevo() {
 // const Curso7 = new Curso(7, "C++", 9000, "Iara Paez", 5);
 
 // Mostrar Productos como JSON //
-const Cursos = [{
+const Cursos = [
+    {
         id: 1,
         nombre: 'HTML',
         precio: 5000,
